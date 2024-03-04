@@ -41,36 +41,39 @@
 * wh_breakdown_l3m : Number of times the warehouse faces thebreakdown in the last 3 months
 * product_wg_ton : Product weight
 
+## 
 * Dataset has 25 columns and 16620 rows.
 * No. of columns with int datatype : 15
 * No. of columns with object datatype : 8
 * No. of columns with float datatype : 2
 * No. of unique values in each column : 
-Unnamed: 0                      16620
-WH_Manager_ID                   16620
-Ware_house_ID                   16620
-retail_shop_num                  4356
-product_wg_ton                   4248
-dist_from_hub                     217
-workers_num                        60
-distributor_num                    56
-storage_issue_reported_l3m         37
-govt_check_l3m                     32
-wh_est_year                        28
-Competitor_in_mkt                  12
-num_refill_req_l3m                  9
-wh_breakdown_l3m                    7
-transport_issue_l1y                 6
-WH_regional_zone                    6
-approved_wh_govt_certificate        5
-zone                                4
-WH_capacity_size                    3
-flood_proof                         2
-flood_impacted                      2
-temp_reg_mach                       2
-Location_type                       2
-wh_owner_type                       2
+Unnamed: 0                      16620           
+WH_Manager_ID                   16620              
+Ware_house_ID                   16620                
+retail_shop_num                  4356               
+product_wg_ton                   4248           
+dist_from_hub                     217     
+workers_num                        60             
+distributor_num                    56                   
+storage_issue_reported_l3m         37            
+govt_check_l3m                     32           
+wh_est_year                        28               
+Competitor_in_mkt                  12            
+num_refill_req_l3m                  9              
+wh_breakdown_l3m                    7                  
+transport_issue_l1y                 6            
+WH_regional_zone                    6              
+approved_wh_govt_certificate        5              
+zone                                4            
+WH_capacity_size                    3             
+flood_proof                         2       
+flood_impacted                      2            
+temp_reg_mach                       2          
+Location_type                       2       
+wh_owner_type                       2         
 electric_supply                     2
+
+#
 
 
 
@@ -123,6 +126,8 @@ Outliers were present in some of the columns. plotted boxplot to locate outliers
 
 
 Determined the count of outliers in every column. Among them, the 'flood_proof' and 'flood_impacted' columns, each containing only two distinct values, exhibit significant disparities in their value distributions and lack correlation. one of the unique values is considered as outlier due to its significantly lower proportion. Consequently, both of these columns were removed from the dataset.
+
+**Outliers were detected and removed**
 
 ## Data Visualization
 Relationship between other features and target variable Product weight
