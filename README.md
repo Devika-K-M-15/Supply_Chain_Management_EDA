@@ -16,6 +16,64 @@
 
 ## Data Exploration
 
+### Data Dictionary
+
+* Ware_house_ID : Unique Warehouse id where product is prepared for dispatch
+* WH_Manager_ID : Manager Id present in the warehouse
+* zone : Zone of the Warehouse
+* WH_regional_zone : Regional Zone of the warehouse
+* num_refill_req_l3m : Refilling request received by the warehouse in the last 3 months
+* transport_issue_l1y : No. of transport issued for warehouse in last 1 year
+* Competitor_in_mkt : No. of competitors in the market
+* retail_shop_num : Number of retail shops who sell noodlesproduced by the warehouse
+* wh_owner_type : The warehouse is owned by the company or it is on rent
+* distributor_num : No. of distributor who works between warehouse and retail shops
+* flood_impacted : Is the warehouse in a flood impacted area or not
+* flood_proof : Warehouse is having flood proof indicator
+* electric_supply : Does the warehouse have proper electric supply along with some power backup
+* dist_from_hub : distance from the warehouse to production hub
+* workers_num : no. workers in the warehouse
+* wh_est_year : warehouse establishment year
+* storage_issue_reported_l3m : storage issues reported by the warehouse in the last 3 months
+* govt_check_l3m : Government checking in last 3 months
+* temp_reg_mach : warehouse having temperature regulating machine indicator or not
+* approved_wh_govt_certificate : Type of approval warehouse having been issued by government
+* wh_breakdown_l3m : Number of times the warehouse faces thebreakdown in the last 3 months
+* product_wg_ton : Product weight
+
+* Dataset has 25 columns and 16620 rows.
+* No. of columns with int datatype : 15
+* No. of columns with object datatype : 8
+* No. of columns with float datatype : 2
+* No. of unique values in each column : 
+Unnamed: 0                      16620
+WH_Manager_ID                   16620
+Ware_house_ID                   16620
+retail_shop_num                  4356
+product_wg_ton                   4248
+dist_from_hub                     217
+workers_num                        60
+distributor_num                    56
+storage_issue_reported_l3m         37
+govt_check_l3m                     32
+wh_est_year                        28
+Competitor_in_mkt                  12
+num_refill_req_l3m                  9
+wh_breakdown_l3m                    7
+transport_issue_l1y                 6
+WH_regional_zone                    6
+approved_wh_govt_certificate        5
+zone                                4
+WH_capacity_size                    3
+flood_proof                         2
+flood_impacted                      2
+temp_reg_mach                       2
+Location_type                       2
+wh_owner_type                       2
+electric_supply                     2
+
+
+
 
 ## Data Preprocessing
 This project mainly focus on analyzing impact of features provided in the dataset on target variable product weight. 
@@ -24,6 +82,7 @@ This project mainly focus on analyzing impact of features provided in the datase
 1. Unnamed: 0
 2. Ware_house_ID
 3. WH_Manager_ID
+
 These three columns each contain entirely distinct values. In the context of this project, the uniqueness of these columns holds no relevance, as they are only analyzing product quantity. Therefore, these three columns have been removed.
 
 ### 2. Missing values
