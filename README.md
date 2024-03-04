@@ -46,8 +46,10 @@
 * No. of columns with int datatype : 15
 * No. of columns with object datatype : 8
 * No. of columns with float datatype : 2
-* No. of unique values in each column : 
-Unnamed: 0                      16620           
+* 
+ ##
+* No. of unique values in each column :               
+Unnamed: 0                      16620                        
 WH_Manager_ID                   16620              
 Ware_house_ID                   16620                
 retail_shop_num                  4356               
