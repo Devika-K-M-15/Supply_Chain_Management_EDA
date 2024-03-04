@@ -1,3 +1,4 @@
+
 # Supply_Chain_Management_EDA
 
 
@@ -19,19 +20,50 @@
 ## Data Preprocessing
 This project mainly focus on analyzing impact of features provided in the dataset on target variable product weight. 
 
-### 1. Drop unwanted columns
-
+### 1. Drop irrelevent columns
+1. Unnamed: 0
+2. Ware_house_ID
+3. WH_Manager_ID
+These three columns each contain entirely distinct values. In the context of this project, the uniqueness of these columns holds no relevance, as they are only analyzing product quantity. Therefore, these three columns have been removed.
 
 ### 2. Missing values
-![00](https://github.com/Devika-K-M-15/Supply_Chain_Management_EDA/blob/main/Visuals/Null%20Values.png)
+Among the 25 columns, null values are present in three columns. These columns correspond to the number of workers in the warehouse (workers_num), the year of warehouse establishment (wh_est_year), and the grade of government certificate approved for the warehouse (approved_wh_govt_certificate).
+
+ **Plot of null values**
+![](https://github.com/Devika-K-M-15/Supply_Chain_Management_EDA/blob/main/Visuals/Null%20Values.png)
+
+% of null values in eachg column:
+
+workers_num(4.01 %)
+wh_est_year(47.29 %)
+approved_wh_govt_certificate(3.6 %)
+
+
+**workers_num :**
+ * numerical column
+ * positively skewed
+ Filled null values with median.
+
+**wh_est_year :**
+
+Since half of the values in the column wh_est_year are null, decided to drop it.
+
+**approved_wh_govt_certificate:**
+* categorical column
+Filled null values with mode.
 
 ### 3. Duplicate values
 No dupliocate values were present in the dataset.
 
 ### 4. Outliers
-![01](https://github.com/Devika-K-M-15/Supply_Chain_Management_EDA/blob/main/Visuals/Outliers%201.png)
 
-![10](https://github.com/Devika-K-M-15/Supply_Chain_Management_EDA/blob/main/Visuals/Outliers%202.png)
+Outliers were present in some of the columns. plotted boxplot to locate outliers.
+![1](https://github.com/Devika-K-M-15/Supply_Chain_Management_EDA/blob/main/Visuals/Outliers%201.png)
+
+![2](https://github.com/Devika-K-M-15/Supply_Chain_Management_EDA/blob/main/Visuals/Outliers%202.png)
+
+
+Determined the count of outliers in every column. Among them, the 'flood_proof' and 'flood_impacted' columns, each containing only two distinct values, exhibit significant disparities in their value distributions and lack correlation. one of the unique values is considered as outlier due to its significantly lower proportion. Consequently, both of these columns were removed from the dataset.
 
 ## Data Visualization
 Relationship between other features and target variable Product weight
